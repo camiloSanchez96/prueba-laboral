@@ -1,0 +1,23 @@
+<div>
+    <nb-card>
+        <nb-card-header>Valores de venta</nb-card-header>
+        <nb-card-body class="row">
+            <div class="col-lg-6 col-md-6 col-12">
+                <h5>En USD</h5>
+                <ul>
+                    <li *ngFor="let valor of vector">
+                        {{valor.cant | pipe}} - {{valor.mes}}
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+                <h5>En EUR</h5>
+                <ul>
+                    <li *ngFor="let valor of vector">
+                        {{valor.cant | pipe:'EUR'}} - {{valor.mes}}
+                    </li>
+                </ul>
+            </div>
+        </nb-card-body>
+      </nb-card>
+</div>

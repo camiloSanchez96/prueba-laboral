@@ -1,0 +1,98 @@
+.body {
+    background-image:url('../../assets/fondos/pexels-photo.jpeg');
+    background-position:center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    -webkit-font-smoothing: antialiased;
+    font: normal 14px Roboto,arial,sans-serif;
+    font-family: 'Dancing Script', cursive!important;
+  }
+  
+  .container {
+      padding: 110px;
+  }
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: #ffffff!important;
+      opacity: 1; /* Firefox */
+      font-size:18px!important;
+  }
+  .form-login {
+      background-color: rgba(0,0,0,0.55);
+      padding-top: 10px;
+      padding-bottom: 20px;
+      padding-left: 20px;
+      padding-right: 20px;
+      border-radius: 15px;
+      border-width: 5px;
+      color:white;
+  }
+  .form-control{
+      background:transparent!important;
+      color:white!important;
+      font-size: 18px!important;
+  }
+  h4 { 
+   border:0 solid #fff; 
+   border-bottom-width:1px;
+   padding-bottom:10px;
+   text-align: center;
+  }
+  
+  .form-control {
+      border-radius: 10px;
+  }
+  .text-white{
+      color: white!important;
+  }
+  .wrapper {
+      text-align: center;
+  }
+  .footer p{
+      font-size: 18px;
+  }
+
+  .Form {
+     margin: auto;
+     max-width: 27rem !important;
+     min-width: 10rem;
+     margin-top: calc(50vh - 270px);
+ }
+ 
+ .iconShowPassword {
+     float: right;
+     cursor: pointer;
+ }
+ 
+ .logoContainer {
+     display: flex;
+ }
+ 
+ .logoForm {
+     max-height: 76px;
+     min-height: 40px;
+     min-width: 10px;
+     margin: auto;
+     display: block;
+ }
+ .textForm {
+     text-align: center;
+ }
+ 
+ .register {
+     text-align: center;
+ }
+ 
+ .buttonSubmit {
+     margin: 20px 0px;
+ }
+ 
+ .login {
+         height: 100%;
+         display: flex;
+         width: 100%;
+         margin: 0;
+ }
+ 
+ .layoutColumn {
+     padding: 2.25rem 2.25rem !important;
+ }

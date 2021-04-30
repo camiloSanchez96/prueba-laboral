@@ -1,0 +1,41 @@
+<nb-layout>
+
+  <nb-layout-column class="layoutColumn" style="padding: 0 !important;">
+
+    <nb-card class="login body">
+      <nb-card-body style="padding-bottom: 9rem;">
+        <form aria-labelledby="title" [formGroup]="form" (ngSubmit)="login(form.valid)" class="Form align-middle">
+          <div class="row" style="backdrop-filter: blur(9px);">
+            <div class="col-lg-12 col-md-12 col-12" style="text-align: center;">
+              <h1 style="color: white!important;">Test Login Form</h1>
+              <div class="form-login"><br>
+                <h4 style="color: white!important;">Secure Login</h4>
+                <br>
+                <div class="form-group" style="text-align: left">
+                  <h5 for="user" style="color: white!important;font-size: 1.3rem;">User</h5>
+                  <input type="text" nbInput style="width: 100%; max-width: 100%;"
+                    class="input-full-width size-large shape-semi-round ng-pristine" formControlName="user" id="user"
+                    placeholder="User" autofocus fullWidth>
+                </div>
+                <div class="form-group" style="text-align: left d-flex">
+                  <h5 for="password" style="color: white!important;font-size: 1.3rem;">Password</h5>
+                  <input type="{{Password ? 'text' : 'password'}}" nbInput
+                  class="input-full-width size-large shape-semi-round ng-pristine" formControlName="password"
+                  id="password" placeholder="Password" (enter)="login(form.valid)">
+                  <button nbSuffix type="button" nbButton ghost (click)="Password = !Password" style="width: 2rem;">
+                    <nb-icon style="min-width: 8rem !important;" icon="{{Password ? 'eye-outline' : 'eye-off-2-outline'}}" pack="eva" class="iconShowPassword">
+                  </nb-icon>
+                  </button>
+                </div>
+                <div class="form-group">
+                  <button class="buttonSubmit" nbButton [nbSpinner]="carga" nbSpinnerStatus="primary" fullWidth status="primary" type="submit"
+                  [disabled]="form.invalid">Login</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </nb-card-body>
+    </nb-card>
+  </nb-layout-column>
+</nb-layout>

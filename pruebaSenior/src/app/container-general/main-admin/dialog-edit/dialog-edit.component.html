@@ -1,0 +1,42 @@
+<nb-card status="success" style="max-width: 30rem;">
+  <nb-card-header>Información usuario</nb-card-header>
+  <nb-card-body>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-12">
+        <div class="mb-4">
+          <label style="font-weight: 700;" for="">Nombre</label>
+          <input type="text" [(ngModel)]="placeholder.nombre" nbInput fullWidth status="primary" placeholder="Nombre">
+        </div>
+        <div class="mb-4">
+          <label style="font-weight: 700;" for="">Edad</label>
+          <input type="number" min="0" [(ngModel)]="placeholder.edad" nbInput fullWidth status="primary" placeholder="Edad">
+        </div>
+        <div>
+          <label style="font-weight: 700;" for="">Cargo</label>
+          <nb-select placeholder="Rol" fullWidth status="primary" [(ngModel)]="placeholder.cargo">
+            <nb-option *ngFor="let item of lista" [value]="item">{{item}}</nb-option>
+          </nb-select>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-12">
+        <div class="mb-4">
+          <label style="font-weight: 700;" for="">País</label>
+          <input type="text" [(ngModel)]="placeholder.pais" nbInput fullWidth status="primary" placeholder="Pais">
+        </div>
+        <div class="mb-4">
+          <label style="font-weight: 700;" for="">Rol</label>
+          <nb-select placeholder="Rol" fullWidth status="primary" [(ngModel)]="placeholder.rol">
+            <nb-option *ngFor="let item of roles" [(value)]="item.codigo">{{item.name}}</nb-option>
+          </nb-select>
+        </div>
+        <div>
+          <label style="font-weight: 700;" for="">Codigo</label>
+          <input type="number" min="0" nbInput fullWidth status="primary" [(ngModel)]="placeholder.codigo" placeholder="codigo">
+        </div>
+      </div>
+      <div class="mt-4 col-lg-12 col-md-12 col-12" style="text-align: center;">
+        <button nbButton hero status="success" style="margin: auto;" (click)="close()">Guardar</button>
+      </div>
+    </div>
+  </nb-card-body>
+</nb-card>

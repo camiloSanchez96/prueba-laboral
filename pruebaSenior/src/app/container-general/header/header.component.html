@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-lg-12 d-flex">
+    <div>
+      <button (click)="logout()" nbButton status="info" style="height: 2rem;">
+        <nb-icon icon="corner-up-left-outline"></nb-icon>Bye,Bye
+      </button>
+    </div>
+    <div class="ml-3">
+      <nb-select status="info" size="small" placeholder="Select Showcase" [(ngModel)]="valorSelect" (selectedChange)="filtro($event)">
+        <nb-option value="Todos">Todos</nb-option>
+        <nb-option *ngFor="let item of lista" [value]="item">{{item}}</nb-option>
+      </nb-select>
+    </div>
+  </div>
+</div>
