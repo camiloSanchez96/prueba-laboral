@@ -45,6 +45,9 @@ export class LogueoComponent implements OnInit {
             }else{
               this.router.navigate(['/general/principalAdmin']);
             }
+          },
+          (err)=>{
+            this.toastr.warning('Se presento un error en el consumo', 'warning');
           });
           setTimeout(() => {
             this.toastr.success('', 'Bienvenido');
@@ -54,6 +57,7 @@ export class LogueoComponent implements OnInit {
         this.carga = false;
       }, err => {
         this.carga = false;
+        this.toastr.warning('Se presento un error en el consumo', 'warning');
       });
     } else {
       this.carga = false;

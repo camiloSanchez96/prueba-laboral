@@ -41,6 +41,9 @@ export class DialogEditComponent implements OnInit {
         this.toastr.success('', res.message);
       }
 
+    },
+    (err)=>{
+      this.toastr.warning('Se presento un error en el consumo', 'warning');
     });
   }
 
